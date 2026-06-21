@@ -104,8 +104,8 @@ interface ServerSentEvent {
 ## CLI
 
 ```bash
-cat stream.txt | @billdaddy/ssekit            # one JSON object per event
-cat openai-stream.txt | @billdaddy/ssekit -t  # just the concatenated text deltas
+cat stream.txt | ssekit            # one JSON object per event
+cat openai-stream.txt | ssekit -t  # just the concatenated text deltas
 ```
 
 ## Companion packages
