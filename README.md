@@ -1,4 +1,4 @@
-# ssekit
+# @billdaddy/ssekit
 
 > Spec-compliant **Server-Sent Events** parser with first-class **LLM streaming** helpers. **Zero dependencies**, web-standard.
 
@@ -11,12 +11,12 @@
 Streaming an LLM response means parsing Server-Sent Events — and SSE has more
 edge cases than it looks: multi-line `data`, comments, three different line
 terminators, a BOM, and frames that split across network chunks (even in the
-middle of a UTF-8 character or between `\r` and `\n`). `ssekit` handles all of it,
+middle of a UTF-8 character or between `\r` and `\n`). `@billdaddy/ssekit` handles all of it,
 works directly with a `fetch` response body, and gives you the text deltas in one
 line.
 
 ```ts
-import { streamSSEText } from "ssekit";
+import { streamSSEText } from "@billdaddy/ssekit";
 
 const res = await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
@@ -29,7 +29,7 @@ for await (const delta of streamSSEText(res.body!)) {
 }
 ```
 
-## Why ssekit?
+## Why @billdaddy/ssekit?
 
 - **Correct.** Implements the WHATWG event-stream parsing algorithm — comments,
   multi-line `data`, `\n` / `\r\n` / `\r`, leading BOM, and "no `data` ⇒ no
@@ -45,8 +45,8 @@ for await (const delta of streamSSEText(res.body!)) {
 ## Install
 
 ```bash
-npm install ssekit
-# or: pnpm add ssekit  /  yarn add ssekit  /  bun add ssekit
+npm install @billdaddy/ssekit
+# or: pnpm add @billdaddy/ssekit  /  yarn add @billdaddy/ssekit  /  bun add @billdaddy/ssekit
 ```
 
 ## API
@@ -104,13 +104,13 @@ interface ServerSentEvent {
 ## CLI
 
 ```bash
-cat stream.txt | ssekit            # one JSON object per event
-cat openai-stream.txt | ssekit -t  # just the concatenated text deltas
+cat stream.txt | @billdaddy/ssekit            # one JSON object per event
+cat openai-stream.txt | @billdaddy/ssekit -t  # just the concatenated text deltas
 ```
 
 ## Companion packages
 
-`ssekit` pairs with the rest of the LLM toolkit:
+`@billdaddy/ssekit` pairs with the rest of the LLM toolkit:
 [`tokenfit`](https://www.npmjs.com/package/tokenfit) (token budgeting),
 [`scrubtext`](https://www.npmjs.com/package/scrubtext) (redact PII before sending),
 and [`jsonpluck`](https://www.npmjs.com/package/jsonpluck) (parse JSON out of model output).
