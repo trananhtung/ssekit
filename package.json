@@ -1,0 +1,69 @@
+{
+  "name": "ssekit",
+  "version": "0.1.0",
+  "description": "Spec-compliant Server-Sent Events (SSE) parser with first-class LLM streaming helpers. Zero dependencies, web-standard.",
+  "keywords": [
+    "sse",
+    "server-sent-events",
+    "eventsource",
+    "stream",
+    "streaming",
+    "llm",
+    "openai",
+    "anthropic",
+    "fetch",
+    "readablestream",
+    "parser",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "author": "Tung Tran (https://github.com/trananhtung)",
+  "homepage": "https://github.com/trananhtung/ssekit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trananhtung/ssekit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trananhtung/ssekit/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "ssekit": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
