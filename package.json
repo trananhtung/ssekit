@@ -1,6 +1,6 @@
 {
   "name": "@billdaddy/ssekit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Spec-compliant Server-Sent Events (SSE) parser with first-class LLM streaming helpers. Zero dependencies, web-standard.",
   "keywords": [
     "sse",
