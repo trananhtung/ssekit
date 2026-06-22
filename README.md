@@ -1,5 +1,7 @@
 # @billdaddy/ssekit
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 > Spec-compliant **Server-Sent Events** parser with first-class **LLM streaming** helpers. **Zero dependencies**, web-standard.
 
 [![CI](https://github.com/trananhtung/ssekit/actions/workflows/ci.yml/badge.svg)](https://github.com/trananhtung/ssekit/actions/workflows/ci.yml)
@@ -114,6 +116,28 @@ cat openai-stream.txt | ssekit -t  # just the concatenated text deltas
 [`tokenfit`](https://www.npmjs.com/package/tokenfit) (token budgeting),
 [`scrubtext`](https://www.npmjs.com/package/scrubtext) (redact PII before sending),
 and [`jsonpluck`](https://www.npmjs.com/package/jsonpluck) (parse JSON out of model output).
+
+## Contributors ✨
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome — code, docs, bug reports, ideas, reviews! See the [emoji key](https://allcontributors.org/docs/en/emoji-key) for how each contribution is recognized, and open a PR or issue to get involved.
+
+Thanks goes to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/trananhtung"><img src="https://avatars.githubusercontent.com/u/30992229?v=4?s=100" width="100px;" alt="Tung Tran"/><br /><sub><b>Tung Tran</b></sub></a><br /><a href="https://github.com/trananhtung/ssekit/commits?author=trananhtung" title="Code">💻</a> <a href="#maintenance-trananhtung" title="Maintenance">🚧</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
